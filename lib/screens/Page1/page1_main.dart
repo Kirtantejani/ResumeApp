@@ -118,90 +118,151 @@ class _Page1State extends State<Page1> {
                 text: "3 EASY STEPS TO CREATE YOUR PERFECT RESUME",
                 textDecoration: TextDecoration.underline,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 50.h,
-                    width: 50.w,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.blue.shade500),
-                    child: Icon(Icons.pending_actions),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.r),
+                    color: Colors.grey.withOpacity(0.75)),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.0.h),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 50.h,
+                              width: 50.w,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.blue.shade500),
+                              child: Icon(
+                                Icons.pending_actions,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            CustomText(
+                              text: "CHOOSE YOUR RESUME TEMPLATE",
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 35.0.w),
+                              child: CustomText(
+                                text:
+                                    "Our professional resume templates are designed strictly following all industry guidelines and best practices that employers look for.",
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      SizedBox(
+                        height: 30.h,
+                        child: VerticalDivider(
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50.h,
+                              width: 50.w,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.blue.shade500),
+                              child: Icon(
+                                Icons.pending_actions,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            CustomText(
+                              text: "SHOW WHAT YOU'RE MADE OF",
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 35.0.w),
+                              child: CustomText(
+                                text:
+                                    "Not finding the right words to showcase yourself? We´ve added thousands of pre-written examples and resume samples. As easy as clicking.",
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      SizedBox(
+                        height: 30.h,
+                        child: VerticalDivider(
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50.h,
+                              width: 50.w,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.blue.shade500),
+                              child: Icon(
+                                Icons.pending_actions,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            CustomText(
+                              text: "DOWNLOAD YOUR RESUME",
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              height: 15.h,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 35.0.w),
+                              child: CustomText(
+                                text:
+                                    "Start impressing employers. Download your awesome resume and land the job you are looking for, effortlessly.",
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(text: "CHOOSE YOUR RESUME TEMPLATE"),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(
-                      text:
-                          "Our professional resume templates are designed strictly following all industry guidelines and best practices that employers look for.")
-                ],
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              SizedBox(
-                height: 30.h,
-                child: VerticalDivider(),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              Column(
-                children: [
-                  Container(
-                    height: 50.h,
-                    width: 50.w,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.blue.shade500),
-                    child: Icon(Icons.pending_actions),
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(text: "SHOW WHAT YOU'RE MADE OF"),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(
-                      text:
-                          "Not finding the right words to showcase yourself? We´ve added thousands of pre-written examples and resume samples. As easy as clicking.")
-                ],
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              SizedBox(
-                height: 30.h,
-                child: VerticalDivider(),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              Column(
-                children: [
-                  Container(
-                    height: 50.h,
-                    width: 50.w,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.blue.shade500),
-                    child: Icon(Icons.pending_actions),
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(text: "DOWNLOAD YOUR RESUME"),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  CustomText(
-                      text:
-                          "Start impressing employers. Download your awesome resume and land the job you are looking for, effortlessly.")
-                ],
+                ),
               ),
             ],
           ),

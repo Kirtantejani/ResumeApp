@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/screens/Page1/Details/personal_details.dart';
 
 import '../../utilis/custom_text.dart';
 
@@ -15,7 +16,10 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
   List items = [
     {
       "icon": Icon(Icons.person_2, size: 30.sp, color: Colors.white),
-      "name": "Personal Information"
+      "name": "Personal Information",
+      "onTap": () {
+        Get.to(PersonalInformation(), transition: Transition.rightToLeft);
+      }
     },
     {
       "icon": Icon(
@@ -23,20 +27,24 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
         size: 30.sp,
         color: Colors.white,
       ),
-      "name": "Summary"
+      "name": "Summary",
+      "onTap": () {}
     },
     {
       "icon": Icon(Icons.work, size: 30.sp, color: Colors.white),
-      "name": "Work Experience"
+      "name": "Work Experience",
+      "onTap": () {}
     },
     {
       "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
-      "name": "Education"
+      "name": "Education",
+      "onTap": () {}
     },
     {"icon": Icon(Icons.accessibility, color: Colors.white), "name": "skill"},
     {
       "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
-      "name": "Project"
+      "name": "Project",
+      "onTap": () {}
     },
   ];
   @override
@@ -72,32 +80,35 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 15.h),
-            child: Container(
-              height: 50.h,
-              width: 50.w,
-              decoration: BoxDecoration(
-                color: Colors.lightBlue.shade700,
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  items[index]["icon"],
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 18.0.h),
-                    child: CustomText(
-                      text: items[index]["name"],
-                      fontSize: 18.sp,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Mulish",
+            child: InkWell(
+              onTap: items[index]["onTap"],
+              child: Container(
+                height: 50.h,
+                width: 50.w,
+                decoration: BoxDecoration(
+                  color: Colors.lightBlue.shade700,
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    items[index]["icon"],
+                    SizedBox(
+                      height: 10.h,
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 18.0.h),
+                      child: CustomText(
+                        text: items[index]["name"],
+                        fontSize: 18.sp,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Mulish",
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           );
