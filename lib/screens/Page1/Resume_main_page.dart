@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:resumeapp/screens/Page1/Details/personal_details.dart';
 import 'package:resumeapp/screens/Page1/Details/summary.dart';
+import 'package:resumeapp/screens/Page1/Details/work_exprience.dart';
 
 import '../../utilis/custom_text.dart';
 
@@ -36,7 +37,9 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
     {
       "icon": Icon(Icons.work, size: 30.sp, color: Colors.white),
       "name": "Work Experience",
-      "onTap": () {}
+      "onTap": () {
+        Get.to(WorkExperience(), transition: Transition.rightToLeft);
+      }
     },
     {
       "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
