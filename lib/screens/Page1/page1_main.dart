@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:resumeapp/screens/Page1/Resume_main_page.dart';
 
 import '../../utilis/custom_text.dart';
 
@@ -96,7 +98,10 @@ class _Page1State extends State<Page1> {
                 style: ElevatedButton.styleFrom(
                     shape: ContinuousRectangleBorder(),
                     backgroundColor: Colors.blueAccent),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(ResumeMainScreen(),
+                      transition: Transition.rightToLeft);
+                },
                 child: CustomText(
                   text: 'Start My Resume',
                   color: Colors.white,
