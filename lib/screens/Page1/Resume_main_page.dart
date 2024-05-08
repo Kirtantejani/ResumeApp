@@ -50,13 +50,17 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
         Get.to(EducationScreen(), transition: Transition.rightToLeft);
       }
     },
-    {"icon": Icon(Icons.accessibility, color: Colors.white), "name": "skill"},
     {
-      "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
-      "name": "Project",
+      "icon": Icon(Icons.accessibility, color: Colors.white),
+      "name": "skill",
       "onTap": () {
         Get.to(SkillScreen(), transition: Transition.rightToLeft);
       }
+    },
+    {
+      "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
+      "name": "Project",
+      "onTap": () {}
     },
   ];
   @override

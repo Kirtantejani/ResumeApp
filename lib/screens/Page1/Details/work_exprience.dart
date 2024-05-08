@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/controller/experience.dart';
+import 'package:resumeapp/model/experience.dart';
+import 'package:resumeapp/screens/Page1/Details/education_screen.dart';
 
 import '../../../common/Color.dart';
+import '../../../utilis/custom_button.dart';
 import '../../../utilis/custom_text.dart';
 import '../../../utilis/custom_text_form_field.dart';
 
@@ -291,6 +295,47 @@ class _WorkExperienceState extends State<WorkExperience> {
                         Icons.add,
                         color: Colors.blue,
                       ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
+              child: Row(
+                children: [
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        Get.back();
+                      },
+                      text: 'Back',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
+                    ),
+                  ),
+                  Spacer(),
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        for (int i = 0; i < item; i++) {
+                          ExperienceController().experiences?.add(Experience(
+                              companyName: controller[i][0],
+                              role: controller[i][1],
+                              startDate: controller[i][2],
+                              currentWork: controller[i][4],
+                              endDate: controller[i][3]));
+                        }
+                        Get.to(EducationScreen(),
+                            transition: Transition.rightToLeft);
+                      },
+                      text: 'Next',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
+                    ),
+                  ),
                 ],
               ),
             ),

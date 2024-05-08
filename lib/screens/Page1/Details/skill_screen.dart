@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/controller/skill.dart';
+import 'package:resumeapp/model/skill.dart';
+import 'package:resumeapp/screens/showResume.dart';
 
 import '../../../common/Color.dart';
+import '../../../utilis/custom_button.dart';
 import '../../../utilis/custom_text.dart';
 import '../../../utilis/custom_text_form_field.dart';
 import '../../../utilis/rate.dart';
@@ -50,7 +54,7 @@ class _SkillScreenState extends State<SkillScreen> {
         ),
         backgroundColor: Colors.blue,
         title: CustomText(
-          text: "Education",
+          text: "Skills",
           fontFamily: "Mulish",
           color: Colors.white,
           fontSize: 22.sp,
@@ -212,6 +216,45 @@ class _SkillScreenState extends State<SkillScreen> {
                     icon: Icon(
                       Icons.add,
                       color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
+              child: Row(
+                children: [
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        Get.back();
+                      },
+                      text: 'Back',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
+                    ),
+                  ),
+                  Spacer(),
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        for (int i = 0; i < item; i++) {
+                          skillController().skills?.add(skill(
+                                skillName: controller[i][0],
+                                skillRate: controller[i][1],
+                              ));
+                        }
+                        Get.to(ResumeShow(),
+                            transition: Transition.rightToLeft);
+                      },
+                      text: 'Next',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
                     ),
                   ),
                 ],

@@ -3,4 +3,5 @@ import 'package:resumeapp/model/personal_details.dart';
 
 class PersonalController extends GetxController {
   PersonalDetails? personalDetails;
+  String? summary;
 }

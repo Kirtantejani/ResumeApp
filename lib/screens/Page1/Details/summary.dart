@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/controller/personal_detail_controller.dart';
+import 'package:resumeapp/screens/Page1/Details/work_exprience.dart';
 
 import '../../../common/Color.dart';
 import '../../../utilis/custom_button.dart';
@@ -72,7 +74,9 @@ class _SummaryScreenState extends State<SummaryScreen> {
                 children: [
                   Center(
                     child: CustombuttonWidget(
-                      onPressed: () async {},
+                      onPressed: () async {
+                        Get.back();
+                      },
                       text: 'Back',
                       textColor: white,
                       buttonWidth: Get.width * 0.35,
@@ -83,7 +87,11 @@ class _SummaryScreenState extends State<SummaryScreen> {
                   Spacer(),
                   Center(
                     child: CustombuttonWidget(
-                      onPressed: () async {},
+                      onPressed: () async {
+                        PersonalController().summary = summary.text;
+                        Get.to(WorkExperience(),
+                            transition: Transition.rightToLeft);
+                      },
                       text: 'Next',
                       textColor: white,
                       buttonWidth: Get.width * 0.35,

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/controller/education.dart';
+import 'package:resumeapp/model/education.dart';
+import 'package:resumeapp/screens/Page1/Details/skill_screen.dart';
 
 import '../../../common/Color.dart';
+import '../../../utilis/custom_button.dart';
 import '../../../utilis/custom_text.dart';
 import '../../../utilis/custom_text_form_field.dart';
 
@@ -337,6 +341,48 @@ class _EducationScreenState extends State<EducationScreen> {
                         Icons.add,
                         color: Colors.blue,
                       ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
+              child: Row(
+                children: [
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        Get.back();
+                      },
+                      text: 'Back',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
+                    ),
+                  ),
+                  Spacer(),
+                  Center(
+                    child: CustombuttonWidget(
+                      onPressed: () async {
+                        for (int i = 0; i < item; i++) {
+                          EducationController().educations?.add(Education(
+                              collegeName: controller[i][0],
+                              cgpa: controller[i][1],
+                              startDate: controller[i][2],
+                              currentWork: controller[i][4],
+                              isCgpa: controller[i][5],
+                              endDate: controller[i][3]));
+                        }
+                        Get.to(SkillScreen(),
+                            transition: Transition.rightToLeft);
+                      },
+                      text: 'Next',
+                      textColor: white,
+                      buttonWidth: Get.width * 0.35,
+                      buttonborderRadius: 10,
+                      buttonBackgroundColor: Colors.lightBlue,
+                    ),
+                  ),
                 ],
               ),
             ),
