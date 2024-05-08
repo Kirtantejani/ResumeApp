@@ -44,18 +44,18 @@ class _HomePageState extends State<HomePage> {
               Icons.email,
               color: index == 0 ? black : navigationIconColor1,
             ),
-            label: 'Orders',
+            label: 'Resume',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/earning_icon.png"),
+            icon: Icon(
+              Icons.list_alt,
               color: index == 1 ? black : navigationIconColor1,
             ),
-            label: 'Earning',
+            label: 'TEMPLATE',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/profile_icon.png"),
+            icon: Icon(
+              Icons.person,
               color: index == 2 ? black : navigationIconColor1,
             ),
             label: 'Profile',
