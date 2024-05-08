@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:resumeapp/screens/Page1/page1_main.dart';
 import 'package:resumeapp/screens/Page2/Page2_main.dart';
 import 'package:resumeapp/screens/Page3/Page3_main.dart';
-import 'package:resumeapp/screens/Page4/page4_main.dart';
 
 import '../common/color.dart';
 
@@ -15,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 0;
-  List<Widget> Screens = [Page1(), Page2(), Page3(), Page4()];
+  List<Widget> Screens = [Page1(), Page2(), Page3()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,15 +68,6 @@ class _HomePageState extends State<HomePage> {
                   : navigationIconColor1,
             ),
             label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.menu,
-              color: index == 3
-                  ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
-                  : navigationIconColor1,
-            ),
-            label: 'Menu',
           ),
         ],
       ),

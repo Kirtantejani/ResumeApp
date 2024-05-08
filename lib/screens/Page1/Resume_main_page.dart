@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:resumeapp/screens/Page1/Details/personal_details.dart';
+import 'package:resumeapp/screens/Page1/Details/summary.dart';
 
 import '../../utilis/custom_text.dart';
 
@@ -28,7 +29,9 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
         color: Colors.white,
       ),
       "name": "Summary",
-      "onTap": () {}
+      "onTap": () {
+        Get.to(SummaryScreen(), transition: Transition.rightToLeft);
+      }
     },
     {
       "icon": Icon(Icons.work, size: 30.sp, color: Colors.white),

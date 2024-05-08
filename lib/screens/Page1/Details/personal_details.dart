@@ -419,14 +419,32 @@ class _PersonalInformationState extends State<PersonalInformation> {
               SizedBox(
                 height: 15,
               ),
-              Center(
-                child: CustombuttonWidget(
-                  onPressed: () async {},
-                  text: 'Submit',
-                  textColor: white,
-                  buttonWidth: Get.width * 0.85,
-                  buttonborderRadius: 10,
-                  buttonBackgroundColor: yellowColor1,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
+                child: Row(
+                  children: [
+                    Center(
+                      child: CustombuttonWidget(
+                        onPressed: () async {},
+                        text: 'Back',
+                        textColor: white,
+                        buttonWidth: Get.width * 0.35,
+                        buttonborderRadius: 10,
+                        buttonBackgroundColor: Colors.lightBlue,
+                      ),
+                    ),
+                    Spacer(),
+                    Center(
+                      child: CustombuttonWidget(
+                        onPressed: () async {},
+                        text: 'Next',
+                        textColor: white,
+                        buttonWidth: Get.width * 0.35,
+                        buttonborderRadius: 10,
+                        buttonBackgroundColor: Colors.lightBlue,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
