@@ -16,6 +16,7 @@ final Color greyColor4 = Color.fromRGBO(90, 90, 90, 1);
 final Color suffixIconColor = Color.fromRGBO(125, 125, 125, 1);
 final Color suffixIconColor1 = Color.fromRGBO(143, 143, 143, 1);
 final Color navigationIconColor1 = Color.fromRGBO(151, 151, 151, 1);
+const Color bluishClr = Color(0xFF4e5ae8);
 
 final Color greyColor5 = Color.fromRGBO(148, 148, 148, 1);
 final Color greyBorder = Color.fromRGBO(211, 211, 211, 1);

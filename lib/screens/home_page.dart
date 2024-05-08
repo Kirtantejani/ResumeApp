@@ -42,28 +42,40 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.email,
-              color: index == 0 ? black : navigationIconColor1,
+              color: index == 0
+                  ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+                  : Theme.of(context)
+                      .bottomNavigationBarTheme
+                      .unselectedItemColor,
             ),
             label: 'Resume',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.list_alt,
-              color: index == 1 ? black : navigationIconColor1,
+              color: index == 1
+                  ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+                  : Theme.of(context)
+                      .bottomNavigationBarTheme
+                      .unselectedItemColor,
             ),
             label: 'TEMPLATE',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: index == 2 ? black : navigationIconColor1,
+              color: index == 2
+                  ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+                  : navigationIconColor1,
             ),
             label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.menu,
-              color: index == 3 ? black : navigationIconColor1,
+              color: index == 3
+                  ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+                  : navigationIconColor1,
             ),
             label: 'Menu',
           ),
