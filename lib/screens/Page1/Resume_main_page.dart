@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/screens/Page1/Details/education_screen.dart';
 import 'package:resumeapp/screens/Page1/Details/personal_details.dart';
+import 'package:resumeapp/screens/Page1/Details/skill_screen.dart';
 import 'package:resumeapp/screens/Page1/Details/summary.dart';
 import 'package:resumeapp/screens/Page1/Details/work_exprience.dart';
 
@@ -44,13 +46,17 @@ class _ResumeMainScreenState extends State<ResumeMainScreen> {
     {
       "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
       "name": "Education",
-      "onTap": () {}
+      "onTap": () {
+        Get.to(EducationScreen(), transition: Transition.rightToLeft);
+      }
     },
     {"icon": Icon(Icons.accessibility, color: Colors.white), "name": "skill"},
     {
       "icon": Icon(Icons.school, size: 30.sp, color: Colors.white),
       "name": "Project",
-      "onTap": () {}
+      "onTap": () {
+        Get.to(SkillScreen(), transition: Transition.rightToLeft);
+      }
     },
   ];
   @override
