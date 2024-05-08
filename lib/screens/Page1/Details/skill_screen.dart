@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../common/Color.dart';
 import '../../../utilis/custom_text.dart';
+import '../../../utilis/custom_text_form_field.dart';
 import '../../../utilis/rate.dart';
 
 class SkillScreen extends StatefulWidget {
@@ -104,54 +106,85 @@ class _SkillScreenState extends State<SkillScreen> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
                               children: [
-                                RatingEmoji(
-                                  value: 1,
-                                  activeValue: controller[index][1],
-                                  onTap: () {
-                                    setState(() {
-                                      controller[index][1] = 1;
-                                    });
-                                  },
+                                CustomTextFormField(
+                                  controller: controller[index][0],
+                                  title: 'Skill ',
+                                  textInputType: TextInputType.name,
+                                  weight: FontWeight.w500,
+                                  hintText: 'Enter Skill Name',
+                                  contentPadding:
+                                      EdgeInsets.only(left: 12, top: 10),
+                                  hintFontFamily: 'Roboto',
+                                  hintWeight: FontWeight.w300,
+                                  hintColor: greyColor1,
+                                  backgroundColor: textFormFieldBackground,
+                                  inputBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: borderFormFieldColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
                                 ),
-                                RatingEmoji(
-                                  value: 2,
-                                  activeValue: controller[index][1],
-                                  onTap: () {
-                                    setState(() {
-                                      controller[index][1] = 2;
-                                    });
-                                  },
+                                SizedBox(
+                                  height: 15,
                                 ),
-                                RatingEmoji(
-                                  value: 3,
-                                  activeValue: controller[index][1],
-                                  onTap: () {
-                                    setState(() {
-                                      controller[index][1] = 3;
-                                    });
-                                  },
-                                ),
-                                RatingEmoji(
-                                  value: 4,
-                                  activeValue: controller[index][1],
-                                  onTap: () {
-                                    setState(() {
-                                      controller[index][1] = 4;
-                                    });
-                                  },
-                                ),
-                                RatingEmoji(
-                                  value: 5,
-                                  activeValue: controller[index][1],
-                                  onTap: () {
-                                    setState(() {
-                                      controller[index][1] = 5;
-                                    });
-                                  },
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 20),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      RatingEmoji(
+                                        value: 1,
+                                        activeValue: controller[index][1],
+                                        onTap: () {
+                                          setState(() {
+                                            controller[index][1] = 1;
+                                          });
+                                        },
+                                      ),
+                                      RatingEmoji(
+                                        value: 2,
+                                        activeValue: controller[index][1],
+                                        onTap: () {
+                                          setState(() {
+                                            controller[index][1] = 2;
+                                          });
+                                        },
+                                      ),
+                                      RatingEmoji(
+                                        value: 3,
+                                        activeValue: controller[index][1],
+                                        onTap: () {
+                                          setState(() {
+                                            controller[index][1] = 3;
+                                          });
+                                        },
+                                      ),
+                                      RatingEmoji(
+                                        value: 4,
+                                        activeValue: controller[index][1],
+                                        onTap: () {
+                                          setState(() {
+                                            controller[index][1] = 4;
+                                          });
+                                        },
+                                      ),
+                                      RatingEmoji(
+                                        value: 5,
+                                        activeValue: controller[index][1],
+                                        onTap: () {
+                                          setState(() {
+                                            controller[index][1] = 5;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),

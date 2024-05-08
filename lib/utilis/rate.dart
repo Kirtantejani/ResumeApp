@@ -23,19 +23,17 @@ class RatingEmoji extends StatelessWidget {
           child: SizedBox(
             height: 30,
             width: 30,
-            child: value == activeValue
-                ? Icon(Icons.star_border_outlined)
+            child: value <= activeValue
+                ? Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  )
                 : Icon(Icons.star_border_outlined),
           ),
         ),
         const SizedBox(
           height: 8,
         ),
-        Text(
-          '$value',
-          style: const TextStyle(
-              fontWeight: FontWeight.w600, fontFamily: 'Montserrat'),
-        )
       ],
     );
   }

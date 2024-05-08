@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:resumeapp/controller/personal_detail_controller.dart';
+import 'package:resumeapp/model/personal_details.dart';
+import 'package:resumeapp/screens/Page1/Details/summary.dart';
 
 import '../../../common/Color.dart';
 import '../../../utilis/custom_button.dart';
@@ -425,7 +428,9 @@ class _PersonalInformationState extends State<PersonalInformation> {
                   children: [
                     Center(
                       child: CustombuttonWidget(
-                        onPressed: () async {},
+                        onPressed: () async {
+                          Get.back();
+                        },
                         text: 'Back',
                         textColor: white,
                         buttonWidth: Get.width * 0.35,
@@ -436,7 +441,21 @@ class _PersonalInformationState extends State<PersonalInformation> {
                     Spacer(),
                     Center(
                       child: CustombuttonWidget(
-                        onPressed: () async {},
+                        onPressed: () async {
+                          PersonalController().personalDetails =
+                              PersonalDetails(
+                                  firstName: f_name.text,
+                                  lastName: l_name.text,
+                                  email: email.text,
+                                  phoneNumber: phone.text,
+                                  line1: line1.text,
+                                  line2: line2.text,
+                                  line3: line3.text,
+                                  github: github.text,
+                                  leetCode: leetcode.text,
+                                  linked: linked.text);
+                          Get.to(SummaryScreen());
+                        },
                         text: 'Next',
                         textColor: white,
                         buttonWidth: Get.width * 0.35,

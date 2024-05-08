@@ -27,6 +27,7 @@ class _Page2State extends State<Page2> {
           fontWeight: FontWeight.bold,
         ),
       ),
+      body: Column(),
     );
   }
 }
